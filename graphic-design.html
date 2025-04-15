@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphic Design Portfolio</title>
+    <title>Your Page Title</title>
+    
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+  
 
 <body>
     <div class="container">
@@ -76,6 +81,15 @@
 
     <!-- Bootstrap JS and dependencies -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-</body>
+    
+    <script>
+        fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+          });
+      </script>
+
+</body>    
 
 </html>
