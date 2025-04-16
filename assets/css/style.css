@@ -1,43 +1,16 @@
-/* ========== Fonts ========== */
-
-/* Regular Font */
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/assets/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Bold Font */
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/assets/fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* Italic Variable Font */
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/assets/fonts/Montserrat/static/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: italic;
-}
-
 /* ========== Global Styles ========== */
 body {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Default system fonts */
   background-color: #f8f9fa;
   color: #212529;
   line-height: 1.6;
 }
 
-/* Apply Montserrat font specifically to headings */
+/* Apply default font to headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Default system fonts */
   font-weight: 700; /* Ensuring bold text for headings */
 }
-
 
 /* ========== Header & Navbar ========== */
 header {
