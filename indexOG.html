@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>  
+
+<body>
+    <div id="navbar"></div>
+
+    <div class="container">
+        <header class="text-center my-5">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my work in video editing, graphic design, and web development.</p>
+        </header>
+
+        <div class="row text-center">
+            <!-- Button to Video Editing Page -->
+            <div class="col-md-3 mb-4">
+                <a href="video-editing.html" class="btn btn-primary btn-lg w-100">Video Editing</a>
+            </div>
+            <!-- Button to Graphic Design Page -->
+            <div class="col-md-3 mb-4">
+                <a href="graphic-design.html" class="btn btn-secondary btn-lg w-100">Graphic Design</a>
+            </div>
+            <!-- Button to College Sample Website -->
+            <div class="col-md-3 mb-4">
+                <a href="https://your-college-sample-website.com" class="btn btn-success btn-lg w-100" target="_blank">Sample Website</a>
+            </div>
+            <!-- Button to Contact Page -->
+            <div class="col-md-3 mb-4">
+                <a href="contact.html" class="btn btn-danger btn-lg w-100">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+          });
+      </script>
+</body>    
+
+</html>
