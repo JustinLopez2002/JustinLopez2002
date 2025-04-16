@@ -46,21 +46,65 @@ section {
 }
 
 /* ========== Buttons ========== */
-.btn-custom {
-  background-color: #007bff;
-  color: #ffffff;
-  padding: 12px 25px;
+/* Added custom button styles */
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-success, .btn-outline-danger {
+  padding: 12px 30px;
   border-radius: 6px;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: background-color 0.3s ease;
-  border: none;
+  border-width: 2px;
+  transition: all 0.3s ease;
 }
 
-.btn-custom:hover {
-  background-color: #0056b3;
-  color: #ffffff;
-  text-decoration: none;
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-outline-success {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-outline-danger {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* ========== Layout Spacing ========== */
+/* Adjusting space between image, text, and buttons */
+.row.mb-5 {
+  margin-bottom: 4rem; /* more space below intro */
+}
+
+.row.g-3 {
+  gap: 1.5rem; /* space between buttons */
 }
 
 /* ========== Media ========== */
