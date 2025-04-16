@@ -46,8 +46,8 @@ section {
 }
 
 /* ========== Buttons ========== */
-/* Added custom button styles */
-.btn-outline-primary, .btn-outline-secondary, .btn-outline-success, .btn-outline-danger {
+/* Reset default outline and ensure solid background by default */
+.btn-primary, .btn-secondary, .btn-success, .btn-danger {
   padding: 12px 30px;
   border-radius: 6px;
   font-weight: 600;
@@ -55,56 +55,72 @@ section {
   letter-spacing: 0.5px;
   border-width: 2px;
   transition: all 0.3s ease;
+  display: inline-block; /* Ensures buttons behave like inline-block elements */
+  width: 100%; /* Ensure full-width buttons */
 }
 
-.btn-outline-primary {
-  border-color: #007bff;
-  color: #007bff;
-}
-
-.btn-outline-primary:hover {
+.btn-primary {
   background-color: #007bff;
-  color: #fff;
+  color: #ffffff;
+  border: none;
 }
 
-.btn-outline-secondary {
-  border-color: #6c757d;
-  color: #6c757d;
+.btn-primary:hover {
+  background-color: #0056b3;
+  color: #ffffff;
 }
 
-.btn-outline-secondary:hover {
+.btn-secondary {
   background-color: #6c757d;
-  color: #fff;
+  color: #ffffff;
+  border: none;
 }
 
-.btn-outline-success {
-  border-color: #28a745;
-  color: #28a745;
+.btn-secondary:hover {
+  background-color: #5a6268;
+  color: #ffffff;
 }
 
-.btn-outline-success:hover {
+.btn-success {
   background-color: #28a745;
-  color: #fff;
+  color: #ffffff;
+  border: none;
 }
 
-.btn-outline-danger {
-  border-color: #dc3545;
-  color: #dc3545;
+.btn-success:hover {
+  background-color: #218838;
+  color: #ffffff;
 }
 
-.btn-outline-danger:hover {
+.btn-danger {
   background-color: #dc3545;
-  color: #fff;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  color: #ffffff;
 }
 
 /* ========== Layout Spacing ========== */
-/* Adjusting space between image, text, and buttons */
-.row.mb-5 {
-  margin-bottom: 4rem; /* more space below intro */
+/* Center the text and image combination */
+.row.align-items-center.mb-5 {
+  display: flex;
+  justify-content: center; /* Centers the content */
+  align-items: center;
 }
 
-.row.g-3 {
-  gap: 1.5rem; /* space between buttons */
+.col-md-8, .col-md-4 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Ensure there's space between image and text */
+.row.align-items-center.mb-5 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
 }
 
 /* ========== Media ========== */
@@ -114,22 +130,6 @@ iframe {
   height: auto;
   border-radius: 8px;
   margin-bottom: 1rem;
-}
-
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 /* ========== Cards ========== */
