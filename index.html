@@ -58,15 +58,27 @@
     </div>
   </div>
 
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
+
   <!-- Bootstrap JS -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Navbar fetch script -->
+  <!-- Load navbar -->
   <script>
     fetch('navbar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+  <!-- Load footer -->
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
       });
   </script>
 
