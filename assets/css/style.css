@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ========== Header & Navbar ========== */
 header {
-  background-color: #3c2d42;
+  background-color: #00000000;
   color: #ffffff;
   padding: 1rem 0;
   text-align: center;
@@ -46,48 +46,32 @@ section {
 }
 
 /* ========== Buttons ========== */
-/* Remove borders and set solid background by default */
-.btn-primary, .btn-secondary, .btn-success, .btn-danger {
-  padding: 12px 25px; /* Adjust button padding */
+/* Transparent background and no borders */
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-danger,
+.btn-custom {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 12px 25px;
   border-radius: 6px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border: none; /* Ensure no borders */
-  background-color: #007bff; /* Default solid button color */
-  color: #ffffff; /* Text color */
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
   display: inline-block;
-  width: 100%; /* Full-width by default */
+  width: auto;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
-  color: #ffffff;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268;
-}
-
-.btn-success {
-  background-color: #28a745;
-}
-
-.btn-success:hover {
-  background-color: #218838;
-}
-
-.btn-danger {
-  background-color: #dc3545;
-}
-
-.btn-danger:hover {
-  background-color: #c82333;
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-success:hover,
+.btn-danger:hover,
+.btn-custom:hover {
+  color: #66ccff;
+  background-color: transparent; /* Make sure no background appears on hover */
 }
 
 /* ========== Layout Spacing ========== */

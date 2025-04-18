@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Justin Lopez</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Load external navbar -->
+  <div id="navbar"></div>
+
+  <!-- About Me Content -->
+  <div class="container py-5">
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-8 text-center">
+        <h1 class="mb-4">About Me</h1>
+        <p class="lead">
+          Hi, I’m <strong>Justin Lopez</strong> — a creative and tech-savvy individual with a passion for
+          <em>video editing, graphic design, and web development</em>.
+          I enjoy bringing ideas to life through visual storytelling and digital design.
+        </p>
+        <p>
+          Whether it's cutting together a compelling video, crafting sleek graphics, or building responsive websites,
+          I love creating things that connect with people. I'm constantly learning, exploring new tools, and pushing
+          the boundaries of what I can make.
+        </p>
+        <p>
+          Outside of creative work, I enjoy gaming, photography, and discovering new music. Thanks for stopping by!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load external footer -->
+  <div id="footer"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Load navbar -->
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+  <!-- Load footer -->
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+</body>
+
+</html>
