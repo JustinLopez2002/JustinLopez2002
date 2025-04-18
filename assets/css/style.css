@@ -46,7 +46,7 @@ section {
 }
 
 /* ========== Buttons ========== */
-/* Transparent background and no borders */
+/* Transparent background and no borders, reduced size */
 .btn-primary,
 .btn-secondary,
 .btn-success,
@@ -55,14 +55,14 @@ section {
   background-color: transparent;
   border: none;
   color: #ffffff;
-  padding: 12px 25px;
+  padding: 5px 12px; /* Reduced padding to shrink button size */
   border-radius: 6px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: color 0.3s ease;
+  transition: none; /* Removed transition for hover color change */
   display: inline-block;
-  width: auto;
+  width: auto; /* Ensures button size is only as large as the text */
 }
 
 .btn-primary:hover,
@@ -70,8 +70,29 @@ section {
 .btn-success:hover,
 .btn-danger:hover,
 .btn-custom:hover {
-  color: #66ccff;
-  background-color: transparent; /* Make sure no background appears on hover */
+  color: #ffffff; /* Removed hover color change */
+  background-color: transparent; /* Ensures no background appears on hover */
+}
+
+/* Custom Buttons */
+.btn-custom {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 5px 12px;
+  font-size: 0.85rem; /* smaller text */
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: none;
+  display: inline-block;
+  width: auto;
+}
+
+.btn-custom:hover {
+  color: #ffffff;
+  background-color: transparent;
 }
 
 /* ========== Layout Spacing ========== */
