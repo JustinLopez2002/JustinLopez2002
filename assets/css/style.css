@@ -46,6 +46,7 @@ section {
 }
 
 /* ========== Buttons ========== */
+
 /* Transparent background and no borders, reduced size */
 .btn-primary,
 .btn-secondary,
@@ -93,6 +94,15 @@ section {
 .btn-custom:hover {
   color: #ffffff;
   background-color: transparent;
+}
+
+/* Button Icons */
+
+.btn-custom .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 /* ========== Layout Spacing ========== */
