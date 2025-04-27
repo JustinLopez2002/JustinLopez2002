@@ -83,6 +83,43 @@ section {
   filter: brightness(1) saturate(100%) invert(35%) sepia(70%) saturate(500%) hue-rotate(150deg);  /* Filter to turn the color to light blue */
 }
 
+/* ========== Carousel ========== */
+
+/* Default state of the arrows */
+.carousel-arrow {
+  height: 40px;
+  width: auto;
+  transition: filter 0.3s ease;  /* Only transition the filter for smooth color change */
+  opacity: 1;
+}
+
+/* Flip the previous arrow */
+.prev-arrow {
+  transform: scaleX(-1);
+}
+
+/* Remove Bootstrap's default transition effects */
+.carousel-control-prev,
+.carousel-control-next {
+  transition: none !important;  /* Disable Bootstrap's transitions */
+  filter: none !important;  /* Ensure no filter effects are applied */
+  opacity: 1 !important;  /* Ensure icons are fully visible */
+}
+
+/* Hover effect for the arrows */
+.carousel-control-prev:hover .carousel-arrow,
+.carousel-control-next:hover .carousel-arrow {
+  filter: brightness(0) saturate(100%) invert(66%) sepia(13%) saturate(1310%) hue-rotate(161deg) brightness(115%) contrast(90%);  /* Apply color change effect */
+  opacity: 1;  /* Ensure the icon remains fully visible on hover */
+}
+
+/* Ensure no change in icon size or position */
+.carousel-control-prev .carousel-arrow,
+.carousel-control-next .carousel-arrow {
+  position: relative;  /* Avoid any unwanted positioning effects */
+  display: block;
+}
+
 /* ========== Layout Spacing ========== */
 /* Center the text and image combination */
 .row.align-items-center.mb-5 {

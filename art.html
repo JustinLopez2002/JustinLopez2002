@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Page Title</title>
+  <title>Art</title>
 
   <!-- Bootstrap CSS -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -29,47 +29,70 @@
         <li data-target="#customCarousel" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
-    
         <div class="carousel-item active text-center">
           <h3>Slide Title 1</h3>
           <img src="assets/images/slide1.jpg" class="d-block mx-auto" alt="Slide 1 Image" style="max-height: 400px;">
           <p class="mt-3">Description for Slide 1 goes here. Brief explanation about the image or content.</p>
         </div>
-    
+
         <div class="carousel-item text-center">
           <h3>Slide Title 2</h3>
           <img src="assets/images/slide2.jpg" class="d-block mx-auto" alt="Slide 2 Image" style="max-height: 400px;">
           <p class="mt-3">Description for Slide 2 goes here. Brief explanation about the image or content.</p>
         </div>
-    
+
         <div class="carousel-item text-center">
           <h3>Slide Title 3</h3>
           <img src="assets/images/slide3.jpg" class="d-block mx-auto" alt="Slide 3 Image" style="max-height: 400px;">
           <p class="mt-3">Description for Slide 3 goes here. Brief explanation about the image or content.</p>
         </div>
-    
       </div>
       <a class="carousel-control-prev" href="#customCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <img src="assets/button_icons/Carousel-Arrow.svg" class="carousel-arrow prev-arrow" alt="Previous">
         <span class="sr-only">Previous</span>
       </a>
       <a class="carousel-control-next" href="#customCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <img src="assets/button_icons/Carousel-Arrow.svg" class="carousel-arrow next-arrow" alt="Next">
         <span class="sr-only">Next</span>
-      </a>
+      </a>                
     </div>
 
   <!-- Footer placeholder -->
   <div id="footer"></div>
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <!-- jQuery (full version) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Updated jQuery version -->
 
   <!-- Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
   <!-- Bootstrap JS -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- jQuery to change the icon on hover -->
+  <script>
+    $(document).ready(function() {
+      // When hovering over the "previous" button
+      $(".carousel-control-prev").hover(
+        function() {
+          $(this).find(".carousel-arrow").attr("src", "assets/button_icons/Carousel-Arrow-Hover.svg"); // Change to hover icon
+        },
+        function() {
+          $(this).find(".carousel-arrow").attr("src", "assets/button_icons/Carousel-Arrow.svg"); // Change back to default icon
+        }
+      );
+
+      // When hovering over the "next" button
+      $(".carousel-control-next").hover(
+        function() {
+          $(this).find(".carousel-arrow").attr("src", "assets/button_icons/Carousel-Arrow-Hover.svg"); // Change to hover icon
+        },
+        function() {
+          $(this).find(".carousel-arrow").attr("src", "assets/button_icons/Carousel-Arrow.svg"); // Change back to default icon
+        }
+      );
+    });
+  </script>
 
   <!-- Load navbar -->
   <script>
