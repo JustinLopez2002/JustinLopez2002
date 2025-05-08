@@ -16,9 +16,9 @@ body {
   padding: 0;
 }
 
-/* ========== Button and Icon Styles ========== */
+/* ========== Buttons and Icons ========== */
 .btn-custom {
-  display: inline-flex; /* Use inline-flex to shrink the button to fit its content */
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -27,17 +27,16 @@ body {
   border: none;
   text-decoration: none;
   border-radius: 5px;
-  padding: 16px 32px; /* Increased padding for a larger button */
+  padding: 16px 32px;
   transition: color 0.3s ease;
   box-shadow: none;
   outline: none;
-  cursor: pointer; /* Pointer cursor on hover */
-  min-width: 120px; /* Minimum width to avoid too small buttons */
-  min-height: 120px; /* Minimum height for consistent size */
-  box-sizing: border-box; /* Ensures padding is included in the element’s dimensions */
+  cursor: pointer;
+  min-width: 120px;
+  min-height: 120px;
+  box-sizing: border-box;
 }
 
-/* Remove any box-shadow or outline on hover and focus, but keep color change */
 .btn-custom:hover,
 .btn-custom:focus,
 .btn-custom:active,
@@ -49,28 +48,22 @@ body {
   filter: none;
 }
 
-/* Icon image styles */
 .btn-custom .icon {
-  width: 48px; /* Adjusted size for the icon */
+  width: 48px;
   height: 48px;
-  margin-bottom: 8px; /* Adjusted margin for better alignment */
+  margin-bottom: 8px;
   transition: transform 0.3s ease, filter 0.3s ease;
-  box-shadow: none;
 }
 
-/* Add external SVG as image */
 .btn-custom .icon img {
   width: 100%;
   height: 100%;
   transition: transform 0.3s ease, filter 0.3s ease;
-  box-shadow: none;
 }
 
-/* Hover effect: Apply transformation or filter change */
 .btn-custom:hover .icon img {
   transform: scale(1);
   filter: brightness(0) saturate(100%) invert(68%) sepia(14%) saturate(1477%) hue-rotate(172deg) brightness(93%) contrast(89%);
-  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 /* ========== Full Height Centering ========== */
@@ -93,11 +86,11 @@ footer,
 
 /* ========== Utility Enhancements ========== */
 .mt-4 {
-  margin-top: 1.5rem;
+  margin-top: 1.5rem !important;
 }
 
 .mb-4 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
 .bg-dark-custom {
@@ -107,4 +100,50 @@ footer,
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+/* ========== Section Layout and Spacing Fix ========== */
+body .container section {
+  padding: 0.5rem !important; /* Force the padding change */
+  margin-bottom: 3rem;
+  border: 6px solid rgb(255, 255, 255) !important; /* Enforced border thickness */
+  outline: none !important;
+  box-sizing: border-box;
+}
+
+section .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* Ensures consistent space between columns */
+  margin-left: 0;
+  margin-right: 0;
+}
+
+section .col-md-6 {
+  padding-left: 10px; /* Adjust padding for columns */
+  padding-right: 10px; /* Adjust padding for columns */
+  flex: 0 0 48%; /* Ensures columns are evenly spaced */
+  max-width: 48%; /* Ensures columns don't exceed 48% width */
+}
+
+section img {
+  display: block;
+  margin: 1.5rem auto; /* Centers the image */
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== Responsive Adjustments ========== */
+@media (max-width: 767.98px) {
+  section .col-md-6 {
+    flex: 0 0 100%; /* Stacks columns on smaller screens */
+    max-width: 100%; /* Ensures columns take full width on mobile */
+    padding: 0;
+  }
+
+  .btn-custom {
+    min-width: 100px;
+    min-height: 100px;
+    padding: 12px 24px;
+  }
 }
