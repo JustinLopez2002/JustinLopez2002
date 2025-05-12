@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Magazine</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Main Content -->
+  <main class="container py-5">
+    <header class="text-center mb-5">
+      <h1 class="fw-bold">Sample Magazine</h1>
+      <p>InDesign projects I made in college, and updated for my portfolio.</p>
+    </header>
+
+    <!-- ========== Magazine Section ========== -->
+    <section class="mb-5 p-4 border border-light-subtle">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <a href="assets/img/DevLogsMagazineCove.jpg" target="_blank">
+            <img src="assets/img/DevLogsMagazineCove.jpg" class="img-fluid" alt="DevLogs Magazine Cover" />
+          </a>
+        </div>
+        <div class="col-md-6">
+          <h2 class="fw-bold">DevLogs Magazine</h2>
+          <p>My colleg had an InDesign unit. For its exam, we were required to make a magazine with a cover, a back cover, a table of contents, and two articles. I based this magazine around game development, featuring testimonies from fictional game developers about fictional games. For the cover, I experimented with blending, brightness, and glitch effects. I figured I could differentiate this magazine from real gaming magazines by focusing on game development.</p>
+          <a href="downloadables/DevLogsPDFs/DevLogsMagazine.pdf" class="btn btn-outline-light" download>
+            <span class="d-none d-sm-inline">Download DevLogs Magazine (PDF)</span>
+            <span class="d-inline d-sm-none">Download PDF</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Journal Section ========== -->
+    <section class="mb-5 p-4 border border-light-subtle">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <a href="assets/img/DevLogs-JournalCover.jpg" target="_blank">
+            <img src="assets/img/DevLogs-JournalCover.jpg" class="img-fluid" alt="DevLogs Journal Cover" />
+          </a>
+        </div>
+        <div class="col-md-6">
+          <h2 class="fw-bold">DevLogs Journal</h2>
+          <p>One of the exam's requirements was to attach some kind of bonus feature. I tried my hand at interactive forms in PDFs by making a journal, meant for magazine readers interested in developing their own game. Its features include note-taking pages, diagram-drawing pages, and to-do lists users can fill in themselves. Initially, it was made in InDesign. However, when making this website, I went back and remade the interactive forms in Acrobat.</p>
+          <a href="downloadables/DevLogsPDFs/DevLogs-Journal.pdf" class="btn btn-outline-light" download>
+            <span class="d-none d-sm-inline">Download DevLogs Journal (PDF)</span>
+            <span class="d-inline d-sm-none">Download PDF</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Bootstrap & Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Dynamic Navbar & Footer -->
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('navbar').innerHTML = html);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('footer').innerHTML = html);
+  </script>
+</body>
+
+</html>

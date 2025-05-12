@@ -5,7 +5,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #000000;
-  background-image: radial-gradient(ellipse 200% 160% at center, rgba(80, 0, 80, 0.3) 0%, rgba(0, 0, 0, 1) 70%);
+  background-image: radial-gradient(ellipse 200% 160% at center, rgba(87, 23, 87, 0.3) 0%, rgba(0, 0, 0, 1) 70%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,9 +104,9 @@ footer,
 
 /* ========== Section Layout and Spacing Fix ========== */
 body .container section {
-  padding: 0.5rem !important; /* Force the padding change */
+  padding: 0.5rem !important;
   margin-bottom: 3rem;
-  border: 6px solid rgb(255, 255, 255) !important; /* Enforced border thickness */
+  border: 1px solid rgba(255, 255, 255, 0) !important;
   outline: none !important;
   box-sizing: border-box;
 }
@@ -114,30 +114,31 @@ body .container section {
 section .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem; /* Ensures consistent space between columns */
+  gap: 2rem;
   margin-left: 0;
   margin-right: 0;
 }
 
 section .col-md-6 {
-  padding-left: 10px; /* Adjust padding for columns */
-  padding-right: 10px; /* Adjust padding for columns */
-  flex: 0 0 48%; /* Ensures columns are evenly spaced */
-  max-width: 48%; /* Ensures columns don't exceed 48% width */
+  padding-left: 10px;
+  padding-right: 10px;
+  flex: 0 0 48%;
+  max-width: 48%;
 }
 
 section img {
   display: block;
-  margin: 1.5rem auto; /* Centers the image */
+  margin: 1.5rem auto;
   max-width: 100%;
   height: auto;
+  cursor: pointer; /* Ensures only the image itself is clickable */
 }
 
 /* ========== Responsive Adjustments ========== */
 @media (max-width: 767.98px) {
   section .col-md-6 {
-    flex: 0 0 100%; /* Stacks columns on smaller screens */
-    max-width: 100%; /* Ensures columns take full width on mobile */
+    flex: 0 0 100%;
+    max-width: 100%;
     padding: 0;
   }
 
