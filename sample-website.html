@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Website</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Main Content -->
+  <main class="container mt-5">
+    <h1 class="text-center">Apple-A-Looza</h1>
+    <div class="text-center my-4">
+      <img src="assets/img/AppleALoozaBanner.png" alt="Apple-A-Looza Banner" class="img-fluid" style="max-width: 75%;">
+    </div>
+
+    <div class="text-center mb-3">
+      <a href="https://justinlopez2002.github.io/Apple-A-Looza/" class="btn btn-outline-light" target="_blank" rel="noopener">Visit the Apple-A-Looza Website</a>
+    </div>
+
+    <p class="text-center">
+      For my college's HTML unit, we were taught how to use ChatGPT and Bootstrap 5 to make websites. This website I made is the result of that. This website is meant to be for a hypothetical family event that's a celebration and showcase of local produce. The bulk of the code was written by ChatGPT, but the asthetics and descriptions were done by me.
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Load Navbar -->
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+
+  <!-- Load Footer -->
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+</body>
+
+</html>
