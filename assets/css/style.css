@@ -148,3 +148,88 @@ section img {
     padding: 12px 24px;
   }
 }
+
+/* ========== About Me ========== */
+
+/* Paragraph formatting for About Me section */
+.about-paragraph {
+  font-size: 1rem;
+  text-align: justify;
+  text-indent: 2em;
+  line-height: 1.6;
+}
+
+/* Circular profile image wrapper */
+.about-img-wrapper {
+  width: 450px; /* Increased size for larger image */
+  height: 450px; /* Set height to match width for perfect circle */
+  overflow: hidden; /* Hides the overflow to maintain the circular shape */
+  border: 3px solid #000; /* Optional border for style */
+  border-radius: 50%; /* Makes the image circular */
+  margin-left: 30px; /* Space between the image and text */
+  position: relative; /* Allows the image to be positioned inside the wrapper */
+  top: -30px; /* Adjusted to move the image upwards */
+}
+
+/* Image inside the wrapper */
+.about-img-wrapper img {
+  width: 100%; /* Ensure the image covers the entire wrapper */
+  height: 100%; /* Make sure the image fills the circle */
+  object-fit: cover; /* Prevents the image from stretching */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+  .about-img-wrapper {
+    width: 300px; /* Slightly larger size for small screens */
+    height: 300px;
+    margin: 20px auto; /* Center the image on small screens */
+    top: -20px; /* Adjust the position for small screens */
+  }
+}
+
+/* ========== Contact ========== */
+
+/* Contact container with extra top spacing */
+.contact-content {
+  margin-top: 60px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact section layout */
+.contact-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px; /* Increased spacing between sections */
+}
+
+/* Icon standardization */
+.contact-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  margin-right: 14px;
+  display: inline-block;
+}
+
+/* Text/link styling */
+.contact-link {
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Header styling remains unchanged */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #fff;
+}

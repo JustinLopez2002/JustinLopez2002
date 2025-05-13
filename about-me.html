@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me - Justin Lopez</title>
+  <title>About Me</title>
 
   <!-- Bootstrap CSS -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -13,44 +13,52 @@
 </head>
 
 <body>
-  <!-- Load external navbar -->
+  <!-- Navbar -->
   <div id="navbar"></div>
 
-  <!-- About Me Content -->
-  <div class="container py-5">
+  <!-- About Me Section -->
+  <main class="container py-5">
     <div class="row justify-content-center mb-5">
-      <div class="col-md-8 text-center">
-        <h1 class="mb-4">About Me</h1>
-        <p class="lead">
-          Hi, I’m <strong>Justin Lopez</strong> — a creative and tech-savvy individual with a passion for
-          <em>video editing, graphic design, and web development</em>.
-          I enjoy bringing ideas to life through visual storytelling and digital design.
-        </p>
-        <p>
-          Whether it's cutting together a compelling video, crafting sleek graphics, or building responsive websites,
-          I love creating things that connect with people. I'm constantly learning, exploring new tools, and pushing
-          the boundaries of what I can make.
-        </p>
-        <p>
-          Outside of creative work, I enjoy gaming, photography, and discovering new music. Thanks for stopping by!
-        </p>
+      <div class="col-lg-10">
+        <div class="row align-items-center">
+          <!-- Text Column -->
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h1 class="mb-4 text-center text-md-start">About Me</h1>
+            <p>
+              I am Justin Lopez, a graduate of Canadian Business College, and an alumni of the Digital Pipeline [4] Youth program. Operating out of Mississauga, Ontario, I specialize in digital media and marketing, specifically video editing, graphic design, and page layouts. Additionally, I have a passion for logistics and planning.
+            </p>
+            <p>
+              One of my hobbies is gaming, which has influenced my understanding of product sales, marketing, and audience management. I balance budget constraints with audience satisfaction, often arriving at unconventional but effective solutions.
+            </p>
+            <p>
+              I am open to working in various team settings, whether as a leader or as a collaborative member. If you need a video editor, graphic designer, or dependable team player, feel free to contact me.
+            </p>
+
+            <!-- Resume Download Button -->
+            <div class="mt-4">
+              <a href="downloadables/JustinLopezResume_2025.docx" class="btn btn-outline-light" download>Download My Resume</a>
+            </div>
+          </div>
+
+          <!-- Image Column -->
+          <div class="col-md-6 text-center">
+            <div class="about-img-wrapper mx-auto">
+              <img src="assets/img/JustinGraduation.png" alt="Justin Lopez Graduation" class="img-fluid rounded-circle" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
-  <!-- Load external footer -->
+  <!-- Footer -->
   <div id="footer"></div>
 
-  <!-- jQuery (required for Bootstrap 4) -->
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
-  <!-- Bootstrap Bundle JS (includes Popper.js) -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Bootstrap JS -->
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Load navbar -->
+  <!-- Load Navbar -->
   <script>
     fetch('navbar.html')
       .then(response => response.text())
@@ -59,7 +67,7 @@
       });
   </script>
 
-  <!-- Load footer -->
+  <!-- Load Footer -->
   <script>
     fetch('footer.html')
       .then(response => response.text())
