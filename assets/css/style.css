@@ -233,3 +233,48 @@ h1 {
   font-weight: bold;
   color: #fff;
 }
+
+/* ========== Podcast Images ========== */
+
+.podcast-artwork {
+  display: block;
+  max-width: 240px;      /* Uniform max width */
+  max-height: 240px;     /* Uniform max height */
+  width: 100%;
+  height: auto;
+  object-fit: cover;     /* Ensures consistent cropping */
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  box-shadow: none;
+}
+
+.podcast-artwork-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.podcast-artwork-desc {
+  font-size: 0.9rem;
+  color: #cccccc;
+  text-align: center;
+  max-width: 280px;
+}
+
+/* Column layout for each image and text block */
+.podcast-image-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.25rem; /* Extra spacing around each image block */
+}
+
+/* Row container spacing */
+.podcast-image-row {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
