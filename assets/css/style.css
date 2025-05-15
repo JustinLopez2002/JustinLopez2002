@@ -14,6 +14,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  padding-bottom: 4rem; /* Added for extra spacing above the footer */
 }
 
 /* ========== Buttons and Icons ========== */
@@ -238,29 +239,28 @@ h1 {
 
 .podcast-artwork {
   display: block;
-  max-width: 240px;      /* Uniform max width */
-  max-height: 240px;     /* Uniform max height */
   width: 100%;
-  height: auto;
-  object-fit: cover;     /* Ensures consistent cropping */
-  border: none;
+  max-width: 220px;
+  height: 240px;
+  object-fit: contain;
   border-radius: 8px;
   margin-bottom: 1.25rem;
-  box-shadow: none;
 }
 
 .podcast-artwork-title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 700;
   text-align: center;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
 }
 
 .podcast-artwork-desc {
-  font-size: 0.9rem;
-  color: #cccccc;
+  font-size: 0.95rem;
+  color: #ffffff;
   text-align: center;
-  max-width: 280px;
+  max-width: 240px;
+  margin: 0 auto;
 }
 
 /* Column layout for each image and text block */
@@ -268,13 +268,14 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1.25rem; /* Extra spacing around each image block */
+  padding: 0.5rem 0.5rem; /* Controls spacing inside each image block */
 }
 
 /* Row container spacing */
 .podcast-image-row {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 1.5rem;
+  margin: -5rem auto 0 auto; /* Pulls entire image section upward */
 }
