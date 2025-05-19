@@ -20,7 +20,7 @@ body {
 /* ========== Navbar ========== */
 .navbar {
   background-color: transparent !important;
-  padding-top: 50px !important; /* Explicitly set top padding */
+  padding-top: 50px !important;
   padding-right: 20px !important;
   padding-bottom: 10px !important;
   padding-left: 20px !important;
@@ -38,22 +38,26 @@ body {
   filter: invert(1);
 }
 
+/* Collapsed navbar content */
 #navbarContent {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-  gap: 25px !important; /* Enforced gap */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
 }
 
-/* Container for buttons inside navbarContent */
-#navbarContent > div {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-  gap: 25px !important;
-  width: 100%;
+/* Default hidden navbar items for collapsed mode */
+.navbar-collapse {
+  display: none;
 }
 
+.navbar-collapse.show {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Button style */
 .navbar-btn {
   display: inline-flex;
   align-items: center;
@@ -63,15 +67,12 @@ body {
   border: none;
   text-decoration: none;
   border-radius: 5px;
-  padding: 4px 8px; /* Padding to tightly fit text */
+  padding: 4px 8px;
   font-size: 0.9rem;
   cursor: pointer;
   box-shadow: none;
   outline: none;
-  min-width: auto;
-  min-height: auto;
-  box-sizing: border-box;
-  white-space: nowrap; /* Prevent wrapping */
+  white-space: nowrap;
   transition: color 0.3s ease;
 }
 
@@ -86,29 +87,14 @@ body {
   filter: none;
 }
 
-.navbar-btn .icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 8px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.navbar-btn .icon img {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.navbar-btn:hover .icon img {
-  transform: scale(1);
-  filter: brightness(0) saturate(100%) invert(68%) sepia(14%) saturate(1477%) hue-rotate(172deg) brightness(93%) contrast(89%);
-}
-
-/* Responsive adjustments */
-@media (max-width: 767.98px) {
-  .navbar-btn {
-    padding: 8px 12px;
-    font-size: 0.9rem;
+/* Responsive overrides */
+@media (min-width: 768px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
   }
 }
 
