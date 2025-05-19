@@ -266,7 +266,8 @@ section .col-md-6 {
   max-width: 48%;
 }
 
-section img {
+section img,
+section video {
   display: block;
   margin: 1.5rem auto;
   max-width: 100%;
@@ -274,20 +275,20 @@ section img {
   cursor: pointer;
 }
 
-/* ========== Responsive Adjustments ========== */
+/* Responsive Adjustments */
 @media (max-width: 767.98px) {
-  section .col-md-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding: 0;
+  section img,
+  section video {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
   }
+}
 
   .btn-custom {
     min-width: 100px;
     min-height: 100px;
     padding: 12px 24px;
   }
-}
 
 /* ========== About Me ========== */
 .about-paragraph {
@@ -392,4 +393,16 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* ========== Apple-A-Looza Responsive ========== */
+@media (max-width: 576px) {
+  .apple-banner {
+    max-width: 100% !important;
+  }
+
+  .apple-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }
