@@ -180,24 +180,11 @@ body {
 }
 
 /* Desktop layout */
-@media (min-width: 992px) {
-  .button-row {
-    flex-wrap: nowrap;
-    justify-content: center;
-    overflow-x: auto;
-    gap: 24px;
-    padding: 0 5vw;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .button-row > * {
-    flex: 0 0 auto;
-  }
-
-  .button-row::-webkit-scrollbar {
-    display: none;
-  }
+.button-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 24px;
 }
 
 /* Responsive: Mobile layout */
