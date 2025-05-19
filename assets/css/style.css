@@ -170,6 +170,42 @@ body {
   filter: brightness(0) saturate(100%) invert(68%) sepia(14%) saturate(1477%) hue-rotate(172deg) brightness(93%) contrast(89%);
 }
 
+/* Wrapper adjustments */
+.full-height-center {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw; /* Prevent buttons from touching screen edges */
+}
+
+/* Desktop layout */
+.button-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* Responsive: Mobile layout */
+@media (max-width: 767.98px) {
+  .full-height-center {
+    align-items: flex-start;
+    padding-top: 80px; /* Increased space from top */
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /* Vertical spacing between buttons */
+  }
+
+  .btn-custom {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
 /* ========== Full Height Centering ========== */
 .full-height-center {
   min-height: 100vh;
