@@ -266,9 +266,8 @@ section .col-md-6 {
   max-width: 48%;
 }
 
-/* Media Elements Scoped by Page-Specific Classes */
-.art-image,
-.video-project {
+section img,
+section video {
   display: block;
   margin: 1.5rem auto;
   max-width: 100%;
@@ -285,8 +284,9 @@ section .col-md-6 {
     padding-right: 0 !important;
   }
 
-  .art-image,
-  .video-project {
+  section img,
+  section video {
+    display: block !important;
     max-width: 100% !important;
     max-height: 400px !important;
     height: auto !important;
