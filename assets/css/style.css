@@ -17,6 +17,53 @@ body {
   padding-bottom: 4rem; /* Added for extra spacing above the footer */
 }
 
+/* ========== Navbar ========== */
+/* Navbar container override to remove background and center buttons */
+.navbar {
+  background-color: transparent !important;
+  padding: 10px 20px !important;
+  justify-content: center !important;
+}
+
+/* Remove default navbar-toggler background and border */
+.navbar-toggler {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Custom toggle icon styling: keep default Bootstrap icon color white */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Collapse container to center the buttons with flex-wrap for mobile */
+#navbarContent {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 10px;
+}
+
+/* Preserve .btn-custom styles inside navbar collapse */
+#navbarContent .btn-custom {
+  min-width: 120px;
+  min-height: 120px;
+  padding: 16px 32px;
+  font-size: 0.9rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767.98px) {
+  #navbarContent .btn-custom {
+    min-width: 100px;
+    min-height: 100px;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
+
 /* ========== Buttons and Icons ========== */
 .btn-custom {
   display: inline-flex;
