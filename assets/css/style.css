@@ -13,19 +13,17 @@ body {
   color: #ffffff;
   line-height: 1.6;
   margin: 0;
-  padding: 0;
-  padding-bottom: 4rem; /* Added for extra spacing above the footer */
+  padding: 0 0 4rem 0;
+  box-sizing: border-box;
 }
 
 /* ========== Navbar ========== */
-/* Navbar container override to remove background and center buttons */
 .navbar {
   background-color: transparent !important;
   padding: 10px 20px !important;
   justify-content: center !important;
 }
 
-/* Remove default navbar-toggler background and border */
 .navbar-toggler {
   border: none;
   background: transparent;
@@ -33,12 +31,10 @@ body {
   padding: 0.25rem 0.5rem;
 }
 
-/* Custom toggle icon styling: keep default Bootstrap icon color white */
 .navbar-toggler-icon {
   filter: invert(1);
 }
 
-/* Collapse container to center the buttons with flex-wrap for mobile */
 #navbarContent {
   display: flex !important;
   flex-wrap: wrap !important;
@@ -46,25 +42,59 @@ body {
   gap: 10px;
 }
 
-/* Preserve .btn-custom styles inside navbar collapse */
-#navbarContent .btn-custom {
-  min-width: 120px;
-  min-height: 120px;
-  padding: 16px 32px;
+/* New class for navbar buttons */
+.navbar-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 12px 24px;
   font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+  min-width: auto;
+  min-height: auto;
+  box-sizing: border-box;
+  transition: color 0.3s ease;
 }
 
-/* Mobile adjustments */
-@media (max-width: 767.98px) {
-  #navbarContent .btn-custom {
-    min-width: 100px;
-    min-height: 100px;
-    padding: 12px 24px;
-    font-size: 0.9rem;
-  }
+.navbar-btn:hover,
+.navbar-btn:focus,
+.navbar-btn:active,
+.navbar-btn:focus-visible {
+  background-color: transparent;
+  color: #a1c6ea;
+  outline: none;
+  box-shadow: none;
+  filter: none;
+}
+
+.navbar-btn .icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.navbar-btn .icon img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.navbar-btn:hover .icon img {
+  transform: scale(1);
+  filter: brightness(0) saturate(100%) invert(68%) sepia(14%) saturate(1477%) hue-rotate(172deg) brightness(93%) contrast(89%);
 }
 
 /* ========== Buttons and Icons ========== */
+/* Preserve original btn-custom but remove conflicting navbar styles */
 .btn-custom {
   display: inline-flex;
   flex-direction: column;
@@ -75,14 +105,15 @@ body {
   border: none;
   text-decoration: none;
   border-radius: 5px;
-  padding: 4px 8px; /* Reduce padding */
-  transition: color 0.3s ease;
+  padding: 16px 32px;
+  font-size: 0.9rem;
+  cursor: pointer;
   box-shadow: none;
   outline: none;
-  cursor: pointer;
-  min-width: auto; /* Remove fixed minimum width */
-  min-height: auto; /* Remove fixed minimum height */
+  min-width: 120px;
+  min-height: 120px;
   box-sizing: border-box;
+  transition: color 0.3s ease;
 }
 
 .btn-custom:hover,
@@ -154,7 +185,7 @@ footer,
 body .container section {
   padding: 0.5rem !important;
   margin-bottom: 3rem;
-  border: 1px solid rgba(255, 255, 255, 0) !important;
+  border: 1px solid transparent !important;
   outline: none !important;
   box-sizing: border-box;
 }
@@ -179,7 +210,7 @@ section img {
   margin: 1.5rem auto;
   max-width: 100%;
   height: auto;
-  cursor: pointer; /* Ensures only the image itself is clickable */
+  cursor: pointer;
 }
 
 /* ========== Responsive Adjustments ========== */
@@ -198,8 +229,6 @@ section img {
 }
 
 /* ========== About Me ========== */
-
-/* Paragraph formatting for About Me section */
 .about-paragraph {
   font-size: 1rem;
   text-align: justify;
@@ -207,38 +236,33 @@ section img {
   line-height: 1.6;
 }
 
-/* Circular profile image wrapper */
 .about-img-wrapper {
-  width: 450px; /* Increased size for larger image */
-  height: 450px; /* Set height to match width for perfect circle */
-  overflow: hidden; /* Hides the overflow to maintain the circular shape */
-  border: 3px solid #000; /* Optional border for style */
-  border-radius: 50%; /* Makes the image circular */
-  margin-left: 30px; /* Space between the image and text */
-  position: relative; /* Allows the image to be positioned inside the wrapper */
-  top: -30px; /* Adjusted to move the image upwards */
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  border: 3px solid #000;
+  border-radius: 50%;
+  margin-left: 30px;
+  position: relative;
+  top: -30px;
 }
 
-/* Image inside the wrapper */
 .about-img-wrapper img {
-  width: 100%; /* Ensure the image covers the entire wrapper */
-  height: 100%; /* Make sure the image fills the circle */
-  object-fit: cover; /* Prevents the image from stretching */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Responsive adjustments for smaller screens */
 @media (max-width: 576px) {
   .about-img-wrapper {
-    width: 300px; /* Slightly larger size for small screens */
+    width: 300px;
     height: 300px;
-    margin: 20px auto; /* Center the image on small screens */
-    top: -20px; /* Adjust the position for small screens */
+    margin: 20px auto;
+    top: -20px;
   }
 }
 
 /* ========== Contact ========== */
-
-/* Contact container with extra top spacing */
 .contact-content {
   margin-top: 60px;
   max-width: 900px;
@@ -246,15 +270,13 @@ section img {
   margin-right: auto;
 }
 
-/* Contact section layout */
 .contact-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 32px; /* Increased spacing between sections */
+  margin-bottom: 32px;
 }
 
-/* Icon standardization */
 .contact-icon {
   width: 36px;
   height: 36px;
@@ -263,7 +285,6 @@ section img {
   display: inline-block;
 }
 
-/* Text/link styling */
 .contact-link {
   font-size: 1.1em;
   color: #fff;
@@ -275,7 +296,6 @@ section img {
   text-decoration: underline;
 }
 
-/* Header styling remains unchanged */
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -283,9 +303,8 @@ h1 {
 }
 
 /* ========== Podcast Images ========== */
-
 .podcast-img-small {
-  max-width: 45%; /* or any percentage or fixed value like 300px */
+  max-width: 45%;
   height: auto;
   display: block;
   margin-left: auto;
