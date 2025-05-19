@@ -119,26 +119,25 @@ body {
 }
 
 /* ========== Buttons and Icons ========== */
-/* Preserve original btn-custom but remove conflicting navbar styles */
 .btn-custom {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   background-color: transparent;
   border: none;
-  text-decoration: none;
   border-radius: 5px;
   padding: 16px 32px;
   font-size: 0.9rem;
   cursor: pointer;
-  box-shadow: none;
-  outline: none;
   min-width: 120px;
   min-height: 120px;
   box-sizing: border-box;
+  text-decoration: none;
   transition: color 0.3s ease;
+  outline: none;
+  box-shadow: none;
 }
 
 .btn-custom:hover,
@@ -170,52 +169,57 @@ body {
   filter: brightness(0) saturate(100%) invert(68%) sepia(14%) saturate(1477%) hue-rotate(172deg) brightness(93%) contrast(89%);
 }
 
-/* Wrapper adjustments */
+/* Container to center buttons with horizontal padding */
 .full-height-center {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 5vw; /* Prevent buttons from touching screen edges */
+  padding: 0 5vw;
+  box-sizing: border-box;
 }
 
-/* Desktop layout */
-@media (min-width: 992px) {
-  .button-row {
-    flex-wrap: nowrap;
-    justify-content: center;
-    overflow-x: auto;
-    gap: 24px;
-    padding: 0 5vw;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .button-row > * {
-    flex: 0 0 auto;
-  }
-
-  .button-row::-webkit-scrollbar {
-    display: none;
-  }
+/* Button row with horizontal layout, no wrapping */
+.button-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 100%;
+  padding: 0 5vw;
+  box-sizing: border-box;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Responsive: Mobile layout */
+/* Prevent buttons from shrinking */
+.button-row > * {
+  flex: 0 0 auto;
+}
+
+/* Hide horizontal scrollbar */
+.button-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile layout: vertical stacking with spacing */
 @media (max-width: 767.98px) {
   .full-height-center {
     align-items: flex-start;
-    padding-top: 80px; /* Increased space from top */
+    padding-top: 80px;
   }
 
   .button-row {
     flex-direction: column;
     align-items: center;
-    gap: 16px; /* Vertical spacing between buttons */
+    gap: 16px;
+    overflow-x: visible;
   }
 
   .btn-custom {
     width: 100%;
     max-width: 320px;
+    min-width: auto;
   }
 }
 
