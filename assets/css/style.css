@@ -286,7 +286,7 @@ section video {
 
   section img,
   section video {
-    margin-top: 0.5rem;
+    margin-top: 0.5rem !important;
     margin-bottom: 1rem;
   }
 }
