@@ -75,13 +75,13 @@ body {
   border: none;
   text-decoration: none;
   border-radius: 5px;
-  padding: 16px 32px;
+  padding: 4px 8px; /* Reduce padding */
   transition: color 0.3s ease;
   box-shadow: none;
   outline: none;
   cursor: pointer;
-  min-width: 120px;
-  min-height: 120px;
+  min-width: auto; /* Remove fixed minimum width */
+  min-height: auto; /* Remove fixed minimum height */
   box-sizing: border-box;
 }
 
