@@ -237,45 +237,10 @@ h1 {
 
 /* ========== Podcast Images ========== */
 
-.podcast-artwork {
+.podcast-img-small {
+  max-width: 45%; /* or any percentage or fixed value like 300px */
+  height: auto;
   display: block;
-  width: 100%;
-  max-width: 220px;
-  height: 240px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 1.25rem;
-}
-
-.podcast-artwork-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 0.5rem;
-}
-
-.podcast-artwork-desc {
-  font-size: 0.95rem;
-  color: #ffffff;
-  text-align: center;
-  max-width: 240px;
-  margin: 0 auto;
-}
-
-/* Column layout for each image and text block */
-.podcast-image-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.5rem 0.5rem; /* Controls spacing inside each image block */
-}
-
-/* Row container spacing */
-.podcast-image-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0 1.5rem;
-  margin: -5rem auto 0 auto; /* Pulls entire image section upward */
+  margin-left: auto;
+  margin-right: auto;
 }
