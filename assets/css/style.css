@@ -38,26 +38,7 @@ body {
   filter: invert(1);
 }
 
-/* Collapsed navbar content */
-#navbarContent {
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-}
-
-/* Default hidden navbar items for collapsed mode */
-.navbar-collapse {
-  display: none;
-}
-
-.navbar-collapse.show {
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-/* Button style */
+/* Navbar buttons */
 .navbar-btn {
   display: inline-flex;
   align-items: center;
@@ -87,7 +68,31 @@ body {
   filter: none;
 }
 
-/* Responsive overrides */
+/* Default layout for navbar content */
+#navbarContent {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Responsive: Mobile-specific collapse behavior */
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    margin-top: 12px;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0.4s ease, opacity 0.4s ease;
+    display: block;
+  }
+
+  .navbar-collapse.show {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+/* Responsive: Desktop-specific layout */
 @media (min-width: 768px) {
   .navbar-collapse {
     display: flex !important;
@@ -95,6 +100,10 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
+    height: auto !important;
+    opacity: 1 !important;
+    transition: none !important;
+    margin-top: 0 !important;
   }
 }
 
