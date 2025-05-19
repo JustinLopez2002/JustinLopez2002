@@ -182,9 +182,11 @@ body {
 /* Desktop layout */
 .button-row {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
+  max-width: 90vw;
+  margin: 0 auto;
 }
 
 /* Responsive: Mobile layout */
