@@ -39,13 +39,12 @@ body {
   display: flex !important;
   flex-wrap: wrap !important;
   justify-content: center !important;
-  gap: 10px;
+  gap: 8px;
 }
 
 /* New class for navbar buttons */
 .navbar-btn {
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #ffffff;
@@ -53,7 +52,7 @@ body {
   border: none;
   text-decoration: none;
   border-radius: 5px;
-  padding: 12px 24px;
+  padding: 4px 8px; /* Reduced padding */
   font-size: 0.9rem;
   cursor: pointer;
   box-shadow: none;
@@ -61,6 +60,7 @@ body {
   min-width: auto;
   min-height: auto;
   box-sizing: border-box;
+  white-space: nowrap; /* Prevent wrapping */
   transition: color 0.3s ease;
 }
 
@@ -91,6 +91,14 @@ body {
 .navbar-btn:hover .icon img {
   transform: scale(1);
   filter: brightness(0) saturate(100%) invert(68%) sepia(14%) saturate(1477%) hue-rotate(172deg) brightness(93%) contrast(89%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .navbar-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
 }
 
 /* ========== Buttons and Icons ========== */
