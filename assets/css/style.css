@@ -5,7 +5,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #000000;
-  background-image: radial-gradient(ellipse 200% 160% at center, rgba(87, 23, 87, 0.3) 0%, rgba(0, 0, 0, 1) 70%);
+  background-image: radial-gradient(ellipse 200% 160% at center, rgba(95, 34, 95, 0.34) 0%, rgba(0, 0, 0, 1) 70%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -361,6 +361,28 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #fff;
+}
+
+@media (max-width: 576px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .contact-link {
+    font-size: 1em;
+    word-break: break-word;
+  }
+
+  .contact-content {
+    padding: 0 16px;
+  }
 }
 
 /* ========== Podcast Images ========== */
