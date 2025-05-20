@@ -17,6 +17,21 @@ body {
   box-sizing: border-box;
 }
 
+/* Mobile BG */
+@media (max-width: 767.98px) {
+  body {
+    background-image: radial-gradient(
+      ellipse 80% 140% at center,
+      rgba(95, 34, 95, 0.34) 0%,
+      rgba(0, 0, 0, 1) 75%
+    );
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+
 /* ========== Navbar ========== */
 .navbar {
   background-color: transparent !important;
@@ -170,21 +185,23 @@ body {
   filter: brightness(0) saturate(100%) invert(68%) sepia(14%) saturate(1477%) hue-rotate(172deg) brightness(93%) contrast(89%);
 }
 
-/* Wrapper adjustments */
-.full-height-center {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 5vw; /* Prevent buttons from touching screen edges */
-}
+/* Responsive: Desktop layout */
+@media (min-width: 992px) {
+  .button-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; /* Adjust horizontal spacing */
+    flex-direction: row;
+    overflow-x: auto; /* Prevent layout break if viewport is narrow */
+  }
 
-/* Desktop layout */
-.button-row {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 24px;
+  .button-row .btn {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    white-space: nowrap;
+  }
 }
 
 /* Responsive: Mobile layout */
@@ -212,6 +229,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 992px) {
+  .full-height-center {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  .button-row {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn-custom {
+    padding: 12px 20px;
+    min-width: auto;
+    min-height: auto;
+  }
 }
 
 /* ========== Footer Styling ========== */
